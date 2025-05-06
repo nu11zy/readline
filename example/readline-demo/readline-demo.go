@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"io"
 	"log"
+	"os"
 	"strconv"
 	"strings"
 	"time"
@@ -84,7 +85,6 @@ func main() {
 		panic(err)
 	}
 	defer l.Close()
-	l.CaptureExitSignal()
 
 	setPasswordCfg := l.GenPasswordConfig()
 	setPasswordCfg.SetListener(func(line []rune, pos int, key rune) (newLine []rune, newPos int, ok bool) {
