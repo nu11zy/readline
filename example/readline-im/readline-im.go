@@ -5,9 +5,10 @@ import (
 	"math/rand"
 	"time"
 
-	"github.com/chzyer/readline"
+	"log"
+
+	"github.com/nu11z/readline"
 )
-import "log"
 
 func main() {
 	rl, err := readline.NewEx(&readline.Config{
